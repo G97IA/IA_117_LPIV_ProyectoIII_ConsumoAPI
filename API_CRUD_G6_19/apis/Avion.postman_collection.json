@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "78a62c0e-00fd-4785-931a-fab908a20006",
+		"name": "Avion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15974657"
+	},
+	"item": [
+		{
+			"name": "GetAllAvion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5006/avion/getall",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"avion",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOneAvion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero_avion\": \"B500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/avion/getone/:numero_avion",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"avion",
+						"getone",
+						":numero_avion"
+					],
+					"variable": [
+						{
+							"key": "numero_avion",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarAvion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numero_avion\": \"B500\",\r\n        \"tipo_avion\": \"COMERCIAL\",\r\n        \"horas_de_vuelo\": \"03:00:00\",\r\n        \"capacidad_de_pasajeros\": 4,\r\n        \"fecha_primer_vuelo\": \"1980-11-11T06:00:00.000Z\",\r\n        \"pais_de_construccion\": \"HONDURAS\",\r\n        \"cantidad_de_vuelos\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/avion/insertar/:numero_avion",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"avion",
+						"insertar",
+						":numero_avion"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "numero_avion",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarAvion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero_avion\": \"B500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/avion/eliminar/:numero_avion",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"avion",
+						"eliminar",
+						":numero_avion"
+					],
+					"variable": [
+						{
+							"key": "numero_avion",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarAvion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numero_avion\": \"B500\",\r\n        \"tipo_avion\": \"COMERCIAL\",\r\n        \"horas_de_vuelo\": \"02:00:00\",\r\n        \"capacidad_de_pasajeros\": 2,\r\n        \"fecha_primer_vuelo\": \"1980-11-11T12:00:00.000Z\",\r\n        \"pais_de_construccion\": \"EL SALVADOR\",\r\n        \"cantidad_de_vuelos\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/avion/actualizar/:numero_avion",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"avion",
+						"actualizar",
+						":numero_avion"
+					],
+					"variable": [
+						{
+							"key": "numero_avion",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

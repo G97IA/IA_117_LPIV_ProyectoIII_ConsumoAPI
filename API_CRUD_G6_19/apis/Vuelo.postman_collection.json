@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "062670ed-613e-4156-83b3-28383f67fe03",
+		"name": "Vuelo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15974657"
+	},
+	"item": [
+		{
+			"name": "GetAllVuelo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5006/vuelo/getall",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"vuelo",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOneVuelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"codigo_vuelo\": \"H504\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/vuelo/getone/:codigo_vuelo",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"vuelo",
+						"getone",
+						":codigo_vuelo"
+					],
+					"variable": [
+						{
+							"key": "codigo_vuelo",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarVuelo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"codigo_vuelo\": \"H504\",\r\n        \"ciudad_origen\": \"HONDURAS DE AQUI\",\r\n        \"ciudad_destino\": \"DUBAI\",\r\n        \"fecha_vuelo\": \"2022-10-31T06:00:00.000Z\",\r\n        \"cantidad_pasajeros\": 15,\r\n        \"tipo_avion\": \"COMERCIAL\",\r\n        \"distancia_km\": 11146.73\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/vuelo/insertar/:codigo_vuelo",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"vuelo",
+						"insertar",
+						":codigo_vuelo"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "codigo_vuelo",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarVuelo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_vuelo\": \"H504\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/vuelo/eliminar/:codigo_vuelo",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"vuelo",
+						"eliminar",
+						":codigo_vuelo"
+					],
+					"variable": [
+						{
+							"key": "codigo_vuelo",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarVuelo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"codigo_vuelo\": \"H504\",\r\n        \"ciudad_origen\": \"WASHINGTON\",\r\n        \"ciudad_destino\": \"PEKIN\",\r\n        \"fecha_vuelo\": \"2022-10-31T06:00:00.000Z\",\r\n        \"cantidad_pasajeros\": 20,\r\n        \"tipo_avion\": \"Airbus A350\",\r\n        \"distancia_km\": 11146.73\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/vuelo/actualizar/:codigo_vuelo",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"vuelo",
+						"actualizar",
+						":codigo_vuelo"
+					],
+					"variable": [
+						{
+							"key": "codigo_vuelo",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

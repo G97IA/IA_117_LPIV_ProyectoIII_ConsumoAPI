@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "4672c0bf-17e9-4bcd-8c64-5413055ee9d3",
+		"name": "Reserva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15974657"
+	},
+	"item": [
+		{
+			"name": "GetAllReserva",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5006/reserva/getall",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"reserva",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOneReserva",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"no_reserva\": \"A1A2A3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/reserva/getone/:no_reserva",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"reserva",
+						"getone",
+						":no_reserva"
+					],
+					"variable": [
+						{
+							"key": "no_reserva",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarReserva",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"no_reserva\": \"A1A2A3\",\r\n        \"codigo_vuelo\": \"CM0302\",\r\n        \"codigo_pasajero\": \"KZUNIGA\",\r\n        \"nombre_pasajero\": \"KEVIN\",\r\n        \"ciudad_destino\": \"TEGUCIGALPA\",\r\n        \"fecha_vuelo\": \"2022-10-28T06:00:00.000Z\",\r\n        \"precio_vuelo\": 17905.6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/reserva/insertar/:no_reserva",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"reserva",
+						"insertar",
+						":no_reserva"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "no_reserva",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarReserva",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_vuelo\": \"A1A2A3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/reserva/eliminar/:no_reserva",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"reserva",
+						"eliminar",
+						":no_reserva"
+					],
+					"variable": [
+						{
+							"key": "no_reserva",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarReserva",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"no_reserva\": \"A1A2A3\",\r\n        \"codigo_vuelo\": \"CM0302\",\r\n        \"codigo_pasajero\": \"MSANCHEZ\",\r\n        \"nombre_pasajero\": \"MACOTO\",\r\n        \"ciudad_destino\": \"LA LIMA\",\r\n        \"fecha_vuelo\": \"2022-10-28T06:00:00.000Z\",\r\n        \"precio_vuelo\": 17905.6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/reserva/actualizar/:no_reserva",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"reserva",
+						"actualizar",
+						":no_reserva"
+					],
+					"variable": [
+						{
+							"key": "no_reserva",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

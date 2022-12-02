@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "30db3942-b391-4cea-a657-89549123daf5",
+		"name": "Pasajero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15974657"
+	},
+	"item": [
+		{
+			"name": "GetAllPasajero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5006/pasajero/getall",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"pasajero",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOnePasajero",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_pasajero\": \"A500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/pasajero/getone/:codigo_pasajero",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"pasajero",
+						"getone",
+						":codigo_pasajero"
+					],
+					"variable": [
+						{
+							"key": "codigo_pasajero",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarPasajero",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"codigo_pasajero\": \"A500\",\r\n        \"nombres\": \"OMAR\",\r\n        \"apellidos\": \"GOMEZ\",\r\n        \"fecha_de_registro\": \"2022-02-01T06:00:00.000Z\",\r\n        \"nacionalidad\": \"HONDUREÑA\",\r\n        \"numero_telefonico\": 99999999,\r\n        \"email\": \"OG@GMAIL.COM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/pasajero/insertar/:codigo_pasajero",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"pasajero",
+						"insertar",
+						":codigo_pasajero"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "codigo_pasajero",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPasajero",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"codigo_pasajero\": \"A500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/pasajero/eliminar/:codigo_pasajero",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"pasajero",
+						"eliminar",
+						":codigo_pasajero"
+					],
+					"variable": [
+						{
+							"key": "codigo_pasajero",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarPasajero",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"codigo_pasajero\": \"A500\",\r\n        \"nombres\": \"OMAR\",\r\n        \"apellidos\": \"GOMEZ\",\r\n        \"fecha_de_registro\": \"2022-02-01T06:00:00.000Z\",\r\n        \"nacionalidad\": \"HONDUREÑA\",\r\n        \"numero_telefonico\": 99989998,\r\n        \"email\": \"OG@GMAIL.COM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5006/pasajero/actualizar/:codigo_pasajero",
+					"host": [
+						"localhost"
+					],
+					"port": "5006",
+					"path": [
+						"pasajero",
+						"actualizar",
+						":codigo_pasajero"
+					],
+					"variable": [
+						{
+							"key": "codigo_pasajero",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
